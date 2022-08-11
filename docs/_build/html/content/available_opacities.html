@@ -1,0 +1,1115 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Available opacity species &mdash; petitRADTRANS 2.3.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Retrieval Examples" href="retrieval_examples.html" />
+    <link rel="prev" title="Interpolating chemical equilibrium abundances" href="notebooks/poor_man.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> petitRADTRANS
+          
+
+          
+            
+            <img src="../_static/petitlogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guide:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Available opacity species</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#line-absorbers">Line absorbers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default-line-absorbers-low-resolution-mode-c-k-lambda-delta-lambda-1000">Default line absorbers, low resolution mode (<code class="docutils literal notranslate"><span class="pre">&quot;c-k&quot;</span></code>, <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda=1000\)</span>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-absorbers-high-resolution-mode-lbl-with-lambda-delta-lambda-10-6"><strong>Line absorbers, high resolution mode</strong> (<code class="docutils literal notranslate"><span class="pre">&quot;lbl&quot;</span></code>, with <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda=10^6\)</span>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contributed-atom-and-ion-opacities-high-resolution-mode">Contributed atom and ion opacities, high resolution mode</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cloud-opacities">Cloud opacities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rayleigh-scatterers">Rayleigh scatterers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#continuum-opacity-sources">Continuum opacity sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval_examples.html">Retrieval Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opa_add.html">Adding opacities</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nat_cst_doc.html">nat_cst constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autoapi/index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">petitRADTRANS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Available opacity species</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/available_opacities.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="available-opacity-species">
+<span id="avail-opas"></span><h1>Available opacity species<a class="headerlink" href="#available-opacity-species" title="Permalink to this headline">¶</a></h1>
+<section id="line-absorbers">
+<h2>Line absorbers<a class="headerlink" href="#line-absorbers" title="Permalink to this headline">¶</a></h2>
+<p>Please see the <a class="reference external" href="installation.html">Installation</a> section for how to
+obtain and use the opacities listed below. For adding more opacity species not listed here,
+please see <a class="reference external" href="opa_add.html">Adding opacities</a>, among them how to plug-and-play install the Exomol opacities calculated
+in the pRT format, available from the <a class="reference external" href="http://www.exomol.com/data/data-types/opacity/">Exomol website</a>.</p>
+<section id="default-line-absorbers-low-resolution-mode-c-k-lambda-delta-lambda-1000">
+<h3>Default line absorbers, low resolution mode (<code class="docutils literal notranslate"><span class="pre">&quot;c-k&quot;</span></code>, <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda=1000\)</span>)<a class="headerlink" href="#default-line-absorbers-low-resolution-mode-c-k-lambda-delta-lambda-1000" title="Permalink to this headline">¶</a></h3>
+<p><strong>These are the default line absorbers contained in the input_data folder you download during the</strong> <a class="reference external" href="installation.html">installation</a>.</p>
+<p>In low resolution mode (<code class="docutils literal notranslate"><span class="pre">&quot;c-k&quot;</span></code>), most of the molecular opacities are calculated considering
+only the main isotopologue. This is different only for CO and TiO, where the contribution of all isotopologues is
+considered. For CO because the secondary isotopes of carbon, for example <span class="math notranslate nohighlight">\(\rm ^{13}C\)</span>, are quite abundant
+when compared to the main isotope, that is <span class="math notranslate nohighlight">\(\rm ^{12}C/^{13}C\sim 100\)</span>, and because CO has very strong and
+sparse lines. Not including these lines therefore has a noticeable effect already at low resolution. For TiO all
+isotopologues are included because the relative ratios between the Ti isotopes are quite large. Apart from these
+two species, the main isotopologue treatment compared very well to codes including all isotopologues, at this low
+resolution, see <a class="reference external" href="http://adsabs.harvard.edu/abs/2017ApJ...850..150B">Baudino et al. (2017)</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please cite the reference mentioned in the description (click the link) when making use of a line species listed below.</p>
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Species name</p></th>
+<th class="head"><p>Required in mass fraction dictionary</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AlH</p></td>
+<td><p>AlH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/sty1524">Yurchenko+18</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>AlO</p></td>
+<td><p>AlO</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1093/mnras/stv507">Patrascu+15</a></p></td>
+</tr>
+<tr class="row-even"><td><p>C2H2</p></td>
+<td><p>C2H2</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/staa229">Chubb+20</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>C2H4</p></td>
+<td><p>C2H4</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/sty1239">Mant+18</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CH4</p></td>
+<td><p>CH4</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1051/0004-6361/201731026">Yurchenko+17</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CO2</p></td>
+<td><p>CO2</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/staa1874">Yurchenko+20</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CO_all_iso_HITEMP</p></td>
+<td><p>CO_all_iso_HITEMP</p></td>
+<td><p>All isotopologues, HITEMP/Kurucz, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CO_12_HITEMP</p></td>
+<td><p>CO_12_HITEMP</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{12}CO\)</span> isotopologue, HITEMP, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CO_13_HITEMP</p></td>
+<td><p>CO_13_HITEMP</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{13}CO\)</span> isotopologue, HITEMP, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CO_all_iso_Chubb</p></td>
+<td><p>CO_all_iso_Chubb</p></td>
+<td><p>All isotopologues, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1088/0067-0049/216/1/15">Gordon+15</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CO_13_Chubb</p></td>
+<td><p>CO_13_Chubb</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{13}CO\)</span> isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1088/0067-0049/216/1/15">Gordon+15</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CaH</p></td>
+<td><p>CaH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1016/j.jqsrt.2011.09.010">Li+12</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CrH</p></td>
+<td><p>CrH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1086/342242">Burrows+02</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>FeH</p></td>
+<td><p>FeH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1051/0004-6361/201015220">Wende+10</a></p></td>
+</tr>
+<tr class="row-even"><td><p>H2O_HITEMP</p></td>
+<td><p>H2O_HITEMP</p></td>
+<td><p>Main isotopologue, HITEMP, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>H2O_Exomol</p></td>
+<td><p>H2O_Exomol</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/sty1877">Polyanski+18</a></p></td>
+</tr>
+<tr class="row-even"><td><p>H2S</p></td>
+<td><p>H2S</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1093/mnras/stw1133">Azzam+16</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>HCN</p></td>
+<td><p>HCN</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://mnras.oxfordjournals.org/content/437/2/1828.abstract">Barber+14</a></p></td>
+</tr>
+<tr class="row-even"><td><p>K_allard</p></td>
+<td><p>K_allard</p></td>
+<td><p>Main isotopologue, VALD, Allard wings, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>K_burrows</p></td>
+<td><p>K_burrows</p></td>
+<td><p>Main isotopologue, VALD, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2003ApJ...583..985B/abstract">Burrows wings</a></p></td>
+</tr>
+<tr class="row-even"><td><p>K_lor_cut</p></td>
+<td><p>K_lor_cut</p></td>
+<td><p>Main isotopologue, VALD, Lorentzian wings, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>MgH</p></td>
+<td><p>MgH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1093/mnras/stt510">Gharib-Nezhad+13</a></p></td>
+</tr>
+<tr class="row-even"><td><p>MgO</p></td>
+<td><p>MgO</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/stz912">Tennyson+19</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>NH3</p></td>
+<td><p>NH3</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/stz2778">Coles+19</a></p></td>
+</tr>
+<tr class="row-even"><td><p>NaH</p></td>
+<td><p>NaH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1093/mnras/stv979">Rivlin+15</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Na_allard</p></td>
+<td><p>Na_allard</p></td>
+<td><p>Main isotopologue, VALD, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019yCat..36280120A/abstract">new Allard wings</a>, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Na_burrows</p></td>
+<td><p>Na_burrows</p></td>
+<td><p>Main isotopologue, VALD, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2003ApJ...583..985B/abstract">Burrows wings</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Na_lor_cut</p></td>
+<td><p>Na_lor_cut</p></td>
+<td><p>Main isotopologue, VALD, Lorentzian wings, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>O2</p></td>
+<td><p>O2</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1016/j.jqsrt.2017.06.038">Gordon+17</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>O3</p></td>
+<td><p>O3</p></td>
+<td><p>Main isotopologue, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>OH</p></td>
+<td><p>OH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1016/j.jqsrt.2015.07.021">Brooke+16</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PH3</p></td>
+<td><p>PH3</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1093/mnras/stu2246">Sousa-Silva+14</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SH</p></td>
+<td><p>SH</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/stz2517">Gorman+19</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>SiO</p></td>
+<td><p>SiO</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/stt1105">Barton+13</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SiO2</p></td>
+<td><p>SiO2</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1093/mnras/staa1287">Owens+20</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_all_Plez</p></td>
+<td><p>TiO_all_Plez</p></td>
+<td><p>All isotopologues, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>TiO_48_Plez</p></td>
+<td><p>TiO_48_Plez</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{48}TiO\)</span> isotopologue, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_all_Exomol</p></td>
+<td><p>TiO_all_Exomol</p></td>
+<td><p>All isotopologues, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/stz1818">McKemmish+19</a></p></td>
+</tr>
+<tr class="row-even"><td><p>TiO_48_Exomol</p></td>
+<td><p>TiO_48_Exomol</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{48}TiO\)</span> isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="https://doi.org/10.1093/mnras/stz1818">McKemmish+19</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>VO_Plez</p></td>
+<td><p>VO_Plez</p></td>
+<td><p>Main isotopologue, B. Plez,, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>VO</p></td>
+<td><p>VO</p></td>
+<td><p>Main isotopologue, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..21C/abstract">ExoMolOP</a>, <a class="reference external" href="http://dx.doi.org/10.1093/mnras/stw1969">McKemmish+16</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Contributed atom and ion opacities:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Mass frac.</p></th>
+<th class="head"><p>Ref. line list / broad.</p></th>
+<th class="head"><p>P (bar), T (K) range</p></th>
+<th class="head"><p>Contributor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Al</p></td>
+<td><p>Al</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Al+</p></td>
+<td><p>Al+</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ca</p></td>
+<td><p>Ca</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ca+</p></td>
+<td><p>Ca+</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Fe</p></td>
+<td><p>Fe</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Fe+</p></td>
+<td><p>Fe+</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Li</p></td>
+<td><p>Li</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Mg</p></td>
+<td><p>Mg</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Mg+</p></td>
+<td><p>Mg+</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>O</p></td>
+<td><p>O</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Si</p></td>
+<td><p>Si</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Si+</p></td>
+<td><p>Si+</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ti</p></td>
+<td><p>Ti</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ti+</p></td>
+<td><p>Ti+</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>V</p></td>
+<td><p>V</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>V+</p></td>
+<td><p>V+</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="line-absorbers-high-resolution-mode-lbl-with-lambda-delta-lambda-10-6">
+<h3><strong>Line absorbers, high resolution mode</strong> (<code class="docutils literal notranslate"><span class="pre">&quot;lbl&quot;</span></code>, with <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda=10^6\)</span>)<a class="headerlink" href="#line-absorbers-high-resolution-mode-lbl-with-lambda-delta-lambda-10-6" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Species name</p></th>
+<th class="head"><p>Required in mass fraction dictionary</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>C2H2_main_iso</p></td>
+<td><p>C2H2_main_iso</p></td>
+<td><p>Main isotopologue, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CH4_212</p></td>
+<td><p>CH4_212</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm CH_3D\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CH4_main_iso</p></td>
+<td><p>CH4_main_iso</p></td>
+<td><p>Main isotopologue, Exomol, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CO2_main_iso</p></td>
+<td><p>CO2_main_iso</p></td>
+<td><p>Main isotopologue, HITEMP, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CO_27</p></td>
+<td><p>CO_27</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{12}C^{17}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CO_28</p></td>
+<td><p>CO_28</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{12}C^{18}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CO_36</p></td>
+<td><p>CO_36</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{13}C^{16}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CO_37</p></td>
+<td><p>CO_37</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{13}C^{17}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CO_38</p></td>
+<td><p>CO_38</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm ^{13}C^{18}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CO_all_iso</p></td>
+<td><p>CO_all_iso</p></td>
+<td><p>All isotopologues, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CO_main_iso</p></td>
+<td><p>CO_main_iso</p></td>
+<td><p>Main isotopologue, HITEMP, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>H2O_162</p></td>
+<td><p>H2O_162</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm HDO\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>H2O_171</p></td>
+<td><p>H2O_171</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm H_2 \ ^{17}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>H2O_172</p></td>
+<td><p>H2O_172</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm HD^{17}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>H2O_181</p></td>
+<td><p>H2O_181</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm H_2 \ ^{18}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>H2O_182</p></td>
+<td><p>H2O_182</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm HD^{18}O\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>H2O_main_iso</p></td>
+<td><p>H2O_main_iso</p></td>
+<td><p>Main isotopologue, HITEMP, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>H2S_main_iso</p></td>
+<td><p>H2S_main_iso</p></td>
+<td><p>Main isotopologue, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>H2_12</p></td>
+<td><p>H2_12</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm HD\)</span>, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>H2_main_iso</p></td>
+<td><p>H2_main_iso</p></td>
+<td><p>Main isotopologue, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>HCN_main_iso</p></td>
+<td><p>HCN_main_iso</p></td>
+<td><p>Main isotopologue, Exomol, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>K</p></td>
+<td><p>K</p></td>
+<td><p>Main isotopologue, VALD, Allard wings, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>NH3_main_iso</p></td>
+<td><p>NH3_main_iso</p></td>
+<td><p>Main isotopologue, Exomol, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Na</p></td>
+<td><p>Na</p></td>
+<td><p>Main isotopologue, VALD, Allard wings, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>O3_main_iso</p></td>
+<td><p>O3_main_iso</p></td>
+<td><p>Main isotopologue, HITRAN, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PH3_main_iso</p></td>
+<td><p>PH3_main_iso</p></td>
+<td><p>Main isotopologue, Exomol, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SiO_main_iso</p></td>
+<td><p>SiO_main_iso</p></td>
+<td><p>Main isotopologue, Exomol, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_all_iso</p></td>
+<td><p>TiO_all_iso</p></td>
+<td><p>All isotopologues, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>TiO_46_Plez</p></td>
+<td><p>TiO_46_Plez</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{46}TiO\)</span>, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_47_Plez</p></td>
+<td><p>TiO_47_Plez</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{47}TiO\)</span>, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>TiO_48_Plez</p></td>
+<td><p>TiO_48_Plez</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{48}TiO\)</span>, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_49_Plez</p></td>
+<td><p>TiO_49_Plez</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{49}TiO\)</span>, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-even"><td><p>TiO_50_Plez</p></td>
+<td><p>TiO_50_Plez</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{50}TiO\)</span>, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_46_Exomol_McKemmish</p></td>
+<td><p>TiO_46_Exomol_McKemmish</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{46}TiO\)</span>, Exomol, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.488.2836M/abstract">McKemmish et al. (2019)</a></p></td>
+</tr>
+<tr class="row-even"><td><p>TiO_47_Exomol_McKemmish</p></td>
+<td><p>TiO_47_Exomol_McKemmish</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{47}TiO\)</span>, Exomol, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.488.2836M/abstract">McKemmish et al. (2019)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_48_Exomol_McKemmish</p></td>
+<td><p>TiO_48_Exomol_McKemmish</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{48}TiO\)</span>, Exomol, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.488.2836M/abstract">McKemmish et al. (2019)</a></p></td>
+</tr>
+<tr class="row-even"><td><p>TiO_49_Exomol_McKemmish</p></td>
+<td><p>TiO_49_Exomol_McKemmish</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{49}TiO\)</span>, Exomol, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.488.2836M/abstract">McKemmish et al. (2019)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TiO_50_Exomol_McKemmish</p></td>
+<td><p>TiO_50_Exomol_McKemmish</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm \ ^{50}TiO\)</span>, Exomol, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.488.2836M/abstract">McKemmish et al. (2019)</a></p></td>
+</tr>
+<tr class="row-even"><td><p>VO</p></td>
+<td><p>VO</p></td>
+<td><p>Main isotopologue, B. Plez, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>FeH_main_iso</p></td>
+<td><p>FeH_main_iso</p></td>
+<td><p>Main isotopologue, Exomol, see references in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019A%26A...627A..67M/abstract">here</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contributed-atom-and-ion-opacities-high-resolution-mode">
+<h3>Contributed atom and ion opacities, high resolution mode<a class="headerlink" href="#contributed-atom-and-ion-opacities-high-resolution-mode" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Mass frac.</p></th>
+<th class="head"><p>Ref. line list / broad.</p></th>
+<th class="head"><p>P (bar), T (K) range</p></th>
+<th class="head"><p>Contributor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Al</p></td>
+<td><p>Al</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>B</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Be</p></td>
+<td><p>Be</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>C</p></td>
+<td><p>C</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ca</p></td>
+<td><p>Ca</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CaII</p></td>
+<td><p>CaII</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Cr</p></td>
+<td><p>Cr</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Fe</p></td>
+<td><p>Fe</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>FeII</p></td>
+<td><p>FeII</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Li</p></td>
+<td><p>Li</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Mg</p></td>
+<td><p>Mg</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>MgII</p></td>
+<td><p>MgII</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>N</p></td>
+<td><p>N</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Si</p></td>
+<td><p>Si</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ti</p></td>
+<td><p>Ti</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>V</p></td>
+<td><p>V</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>VII</p></td>
+<td><p>VII</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p><a class="reference external" href="http://kurucz.harvard.edu">Kurucz</a>, <span class="math notranslate nohighlight">\(\gamma_{\rm nat+VdW},\sigma_{\rm therm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:karan&#37;&#52;&#48;mpia&#46;de">K<span>&#46;</span> Molaverdikhani</a></p></td>
+</tr>
+<tr class="row-even"><td><p>VO_ExoMol_McKemmish</p></td>
+<td><p>VO_ExoMol_McKemmish</p></td>
+<td><p><a class="reference external" href="https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/stw1969">McKemmish et al. (2016)</a></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:regt&#37;&#52;&#48;strw&#46;leidenuniv&#46;nl">S<span>&#46;</span> de Regt</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>VO_ExoMol_Specific_Transitions</p></td>
+<td><p>VO_ExoMol_Specific_Transitions</p></td>
+<td><p>Most accurate transitions from <a class="reference external" href="https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/stw1969">McKemmish et al. (2016)</a></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span>-<span class="math notranslate nohighlight">\(10^{3}\)</span>, 80-4000</p></td>
+<td><p><a class="reference external" href="mailto:regt&#37;&#52;&#48;strw&#46;leidenuniv&#46;nl">S<span>&#46;</span> de Regt</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="cloud-opacities">
+<h2>Cloud opacities<a class="headerlink" href="#cloud-opacities" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Species name</p></th>
+<th class="head"><p>Required in mass fraction dictionary</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Al2O3(c)_cm</p></td>
+<td><p>Al2O3(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Al2O3(c)_cd</p></td>
+<td><p>Al2O3(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>Fe(c)_am</p></td>
+<td><p>Fe(c)</p></td>
+<td><p>Amorphous, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fe(c)_ad</p></td>
+<td><p>Fe(c)</p></td>
+<td><p>Amorphous, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>Fe(c)_cm</p></td>
+<td><p>Fe(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fe(c)_cd</p></td>
+<td><p>Fe(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>H2O(c)_cm</p></td>
+<td><p>H2O(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>H2O(c)_cd</p></td>
+<td><p>H2O(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>KCL(c)_cm</p></td>
+<td><p>KCL(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>KCL(c)_cd</p></td>
+<td><p>KCL(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>Mg05Fe05SiO3(c)_am</p></td>
+<td><p>Mg05Fe05SiO3(c)</p></td>
+<td><p>Amorphous, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mg05Fe05SiO3(c)_ad</p></td>
+<td><p>Mg05Fe05SiO3(c)</p></td>
+<td><p>Amorphous, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>Mg2SiO4(c)_am</p></td>
+<td><p>Mg2SiO4(c)</p></td>
+<td><p>Amorphous, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mg2SiO4(c)_ad</p></td>
+<td><p>Mg2SiO4(c)</p></td>
+<td><p>Amorphous, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>Mg2SiO4(c)_cm</p></td>
+<td><p>Mg2SiO4(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mg2SiO4(c)_cd</p></td>
+<td><p>Mg2SiO4(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>MgAl2O4(c)_cm</p></td>
+<td><p>MgAl2O4(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MgAl2O4(c)_cd</p></td>
+<td><p>MgAl2O4(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>MgFeSiO4(c)_am</p></td>
+<td><p>MgFeSiO4(c)</p></td>
+<td><p>Amorphous, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MgFeSiO4(c)_ad</p></td>
+<td><p>MgFeSiO4(c)</p></td>
+<td><p>Amorphous, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>MgSiO3(c)_am</p></td>
+<td><p>MgSiO3(c)</p></td>
+<td><p>Amorphous, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MgSiO3(c)_ad</p></td>
+<td><p>MgSiO3(c)</p></td>
+<td><p>Amorphous, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>MgSiO3(c)_cm</p></td>
+<td><p>MgSiO3(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MgSiO3(c)_cd</p></td>
+<td><p>MgSiO3(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>Na2S(c)_cm</p></td>
+<td><p>Na2S(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Na2S(c)_cd</p></td>
+<td><p>Na2S(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+<tr class="row-even"><td><p>SiC(c)_cm</p></td>
+<td><p>SiC(c)</p></td>
+<td><p>Crystalline, Mie scattering (spherical)</p></td>
+</tr>
+<tr class="row-odd"><td><p>SiC(c)_cd</p></td>
+<td><p>SiC(c)</p></td>
+<td><p>Crystalline, DHS (irregular shape)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rayleigh-scatterers">
+<h2>Rayleigh scatterers<a class="headerlink" href="#rayleigh-scatterers" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Species name</p></th>
+<th class="head"><p>Required in mass fraction dictionary</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>H2</p></td>
+<td><p>H2</p></td>
+</tr>
+<tr class="row-odd"><td><p>He</p></td>
+<td><p>He</p></td>
+</tr>
+<tr class="row-even"><td><p>H2O</p></td>
+<td><p>H2O</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO2</p></td>
+<td><p>CO2</p></td>
+</tr>
+<tr class="row-even"><td><p>O2</p></td>
+<td><p>O2</p></td>
+</tr>
+<tr class="row-odd"><td><p>N2</p></td>
+<td><p>N2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>CO</p></td>
+</tr>
+<tr class="row-odd"><td><p>CH4</p></td>
+<td><p>CH4</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="continuum-opacity-sources">
+<h2>Continuum opacity sources<a class="headerlink" href="#continuum-opacity-sources" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Species name</p></th>
+<th class="head"><p>Required in mass fraction dictionary</p></th>
+<th class="head"><p>Descripton</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>H2-H2</p></td>
+<td><p>H2</p></td>
+<td><p>Collision induced absorption (CIA)</p></td>
+</tr>
+<tr class="row-odd"><td><p>H2-He</p></td>
+<td><p>H2, He</p></td>
+<td><p>Collision induced absorption (CIA)</p></td>
+</tr>
+<tr class="row-even"><td><p>N2-N2</p></td>
+<td><p>N2</p></td>
+<td><p>Collision induced absorption (CIA)</p></td>
+</tr>
+<tr class="row-odd"><td><p>O2-O2</p></td>
+<td><p>O2</p></td>
+<td><p>Collision induced absorption (CIA)</p></td>
+</tr>
+<tr class="row-even"><td><p>N2-O2</p></td>
+<td><p>N2, O2</p></td>
+<td><p>Collision induced absorption (CIA)</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO2-CO2</p></td>
+<td><p>CO2</p></td>
+<td><p>Collision induced absorption (CIA)</p></td>
+</tr>
+<tr class="row-even"><td><p>H-</p></td>
+<td><p>H, H-, e-</p></td>
+<td><p>H- bound-free and free-free opacity</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="retrieval_examples.html" class="btn btn-neutral float-right" title="Retrieval Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="notebooks/poor_man.html" class="btn btn-neutral float-left" title="Interpolating chemical equilibrium abundances" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2020, Paul Mollière
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

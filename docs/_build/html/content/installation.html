@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; petitRADTRANS 2.3.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="petitRADTRANS documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> petitRADTRANS
+          
+
+          
+            
+            <img src="../_static/petitlogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guide:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pre-installation-download-the-opacity-data">Pre-installation: download the opacity data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-via-pip-install">Installation via pip install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-prt-from-source">Compiling pRT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-the-installation">Testing the installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="available_opacities.html">Available opacity species</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval_examples.html">Retrieval Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opa_add.html">Adding opacities</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nat_cst_doc.html">nat_cst constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autoapi/index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">petitRADTRANS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<section id="pre-installation-download-the-opacity-data">
+<h2>Pre-installation: download the opacity data<a class="headerlink" href="#pre-installation-download-the-opacity-data" title="Permalink to this headline">¶</a></h2>
+<p>Before you install pRT, please download the opacity data, at least the
+low-resolution version (<span class="math notranslate nohighlight">\(\lambda/\Delta\lambda=1000\)</span>), as it
+provides all relevant input files for pRT to run, and contains the
+necessary folder structure if you want to install high-resolution
+opacities later (<span class="math notranslate nohighlight">\(\lambda/\Delta\lambda=10^6\)</span>).</p>
+<p>Thus, to get started download the <a class="reference external" href="https://keeper.mpdl.mpg.de/f/f5aba635d3a244adb3c0/?dl=1">opacity and input data</a>
+(12.1 GB), unzip them, and put the “input_data” folder somewhere on
+your computer (it does not matter where).</p>
+<p>Next, please add the following environment variable to your
+“.bash_profile” or “.bashrc” file (depending on your operating system)
+by typing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export pRT_input_data_path=&quot;absolute/path/of/the/folder/input_data&quot;&#39;</span> &gt;&gt;~/.bash_profile
+</pre></div>
+</div>
+<p>for Mac OS and</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export pRT_input_data_path=&quot;absolute/path/of/the/folder/input_data&quot;&#39;</span> &gt;&gt;~/.bashrc
+</pre></div>
+</div>
+<p>for Linux. Now you are ready to go and can proceed with the actual
+installation of pRT.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Don’t forget to adapt the path in the line above! If you are
+uncertain what the absolute path of the input_data folder is, then
+switch to that folder in the terminal, type “pwd”, and press Enter.
+You can then just copy-paste that path. Then close and reopen the
+terminal such that it will read the environment variable correctly.</p>
+</div>
+<p>If you want to also use high-resolution opacity
+data please follow these steps here, but note that they can be
+installed at any point after the pRT installation:</p>
+<p>The high resolution (<span class="math notranslate nohighlight">\(\lambda/\Delta\lambda=10^6\)</span>) opacity data
+(about 240 GB if you want to get all species) can be
+accessed and downloaded <a class="reference external" href="https://keeper.mpdl.mpg.de/d/e627411309ba4597a343/">via Keeper here</a>. To
+install them, create a folder called “line_by_line” in the
+“input_data/opacities/lines” folder. Then put the folder of the absorber
+species you downloaded in there.</p>
+</section>
+<section id="installation-via-pip-install">
+<h2>Installation via pip install<a class="headerlink" href="#installation-via-pip-install" title="Permalink to this headline">¶</a></h2>
+<p>To install pRT via pip install just type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install petitRADTRANS
+</pre></div>
+</div>
+<p>in a terminal. Note that you must also have downloaded the low-resolution
+opacities either before or after to actually run pRT, see
+<a class="reference external" href="#pre-installation-download-the-opacity-data">above</a>.</p>
+</section>
+<section id="compiling-prt-from-source">
+<h2>Compiling pRT from source<a class="headerlink" href="#compiling-prt-from-source" title="Permalink to this headline">¶</a></h2>
+<p>Download petitRADTRANS from <a class="reference external" href="https://gitlab.com/mauricemolli/petitRADTRANS.git">Gitlab</a>, or clone it from GitLab via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@gitlab.com:mauricemolli/petitRADTRANS.git
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In the terminal, enter the petitRADTRANS folder</p></li>
+<li><p>Type the following in the terminal <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code>, and press
+Enter.</p></li>
+</ul>
+</section>
+<section id="testing-the-installation">
+<h2>Testing the installation<a class="headerlink" href="#testing-the-installation" title="Permalink to this headline">¶</a></h2>
+<p>Open a new terminal window (this will source the <code class="docutils literal notranslate"><span class="pre">pRT_input_data_path</span></code>). Then open python and type</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">petitRADTRANS</span> <span class="kn">import</span> <span class="n">Radtrans</span>
+<span class="n">atmosphere</span> <span class="o">=</span> <span class="n">Radtrans</span><span class="p">(</span><span class="n">line_species</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CH4&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This should produce the following output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> Read line opacities of CH4...
+Done.
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="petitRADTRANS documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2020, Paul Mollière
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
