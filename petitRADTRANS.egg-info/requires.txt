@@ -1,0 +1,11 @@
+scipy
+numpy
+matplotlib
+h5py
+corner
+astropy
+exo_k
+molmass
+seaborn
+pymultinest
+corner
