@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>petitRADTRANS documentation &mdash; petitRADTRANS 2.3.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="content/installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> petitRADTRANS
+          
+
+          
+            
+            <img src="_static/petitlogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/available_opacities.html">Available opacity species</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/retrieval_examples.html">Retrieval Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/opa_add.html">Adding opacities</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content/nat_cst_doc.html">nat_cst constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">petitRADTRANS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>petitRADTRANS documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="petitradtrans-documentation">
+<h1>petitRADTRANS documentation<a class="headerlink" href="#petitradtrans-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the <strong>petitRADTRANS</strong> (pRT) documentation. pRT is a
+Python package for calculating transmission and emission spectra
+of exoplanets for clear and cloudy planets. pRT also incorporates (<strong>new!</strong>)
+an easy subpackage for running retrievals with nested sampling.</p>
+<p><strong>To get started with some examples on how to run pRT immediately,
+see</strong> <a class="reference external" href="content/notebooks/getting_started.html">“Getting started”</a>. <strong>Otherwise read on for some more general info,
+also on how to best run retrievals.</strong></p>
+<p>pRT has two different opacity treatment modes. The low resolution mode runs calculations
+at <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda\leq 1000\)</span> using the so-called correlated-k treatment for opacities.
+The high resolution mode runs calculations at <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda\leq 10^6\)</span>, using a line-by-line opacity treatment.</p>
+<p>pRT’s low-resolution opacities are initially stored at <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda = 1000\)</span> but can be rebinned to lower
+resolution by the user, for which we make use of the <a class="reference external" href="https://pypi.org/project/exo-k/">Exo_k</a> package.
+This is explained <a class="reference external" href="content/notebooks/Rebinning_opacities.html">here</a>.</p>
+<p>The high-resolution opacities are initially stored at <span class="math notranslate nohighlight">\(\lambda/\Delta\lambda = 10^6\)</span>, and example calculations are shown
+<a class="reference external" href="content/notebooks/highres.html">here</a>. Opacities can also be undersampled, to run at a lower resolution, and to speed up
+spectral calculations. The user should verify whether this leads to solutions which are identical to the rebinned results of the fiducial
+<span class="math notranslate nohighlight">\(\lambda/\Delta\lambda = 10^6\)</span> resolution. Undersampling is done with the <code class="docutils literal notranslate"><span class="pre">lbl_opacity_sampling</span></code> parameter
+described in the <a class="reference external" href="autoapi/petitRADTRANS/radtrans/index.html#petitRADTRANS.radtrans.Radtrans">API</a> here. An example is
+given <a class="reference external" href="content/notebooks/Rebinning_opacities.html">here</a>.</p>
+<p>pRT can calculate transmission and emission spectra of exoplanets, for clear or cloudy atmospheres. The different cloud treatments
+(gray clouds, power law clouds, “real” clouds using optical constants) are described in the tutorial <a class="reference external" href="content/notebooks/clouds.html">here</a>.
+Scattering is included in pRT, but must be specifically turned on for emission spectra (note that scattering increases the runtime),
+see <a class="reference external" href="content/notebooks/emis_scat.html">Scattering for Emission Spectra</a>. pRT can also calculate the reflection of light
+at the surface of rocky planets, for which the user can specify wavelength-dependent albedos and emissivities. This is likewise
+explained in <a class="reference external" href="content/notebooks/emis_scat.html">Scattering for Emission Spectra</a>.</p>
+<p>The newly added retrieval subpackage is documented <a class="reference external" href="content/notebooks/pRT_Retrieval_Example.html">here</a>.
+At the moment pRT retrievals are making use of the <a class="reference external" href="https://johannesbuchner.github.io/PyMultiNest/">PyMultiNest</a>
+package for parameter inference. Of course you are free to use pRT spectral synthesis routines with any other inference tool of your liking.
+For this you will have to setup your own retrieval framework, however (you can modify / check our source code for inspiration).</p>
+<p>petitRADTRANS is available under the MIT License, and documented in
+<a class="reference external" href="https://arxiv.org/abs/1904.11504">Mollière et al. (2019)</a>, for the general code, and <a class="reference external" href="https://arxiv.org/abs/2006.09394">Mollière et al. (2020)</a>, Alei et al. (in prep.), for the scattering implementation. Please cite these papers if you make use of petitRADTRANS in your work.</p>
+<p>This documentation webpage contains an <a class="reference external" href="content/installation.html">installation guide</a>, a
+<a class="reference external" href="content/tutorial.html">tutorial</a>, an <a class="reference external" href="autoapi/index.html">API documentation</a>.
+We also give a <a class="reference external" href="content/opa_add.html">list of easy-to-use resources on how to include
+opacities</a> that may be missing from <a class="reference external" href="content/available_opacities.html">our database</a>.
+For the easiest cases this may correspond to simply dropping a file
+into the pRT opacity folder.</p>
+<section id="developers">
+<h2>Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Paul Mollière</p></li>
+<li><p>Evert Nasedkin</p></li>
+<li><p>Eleonora Alei</p></li>
+</ul>
+</section>
+<section id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Karan Molaverdikhani</p></li>
+<li><p>Mantas Zilinskas</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/installation.html#pre-installation-download-the-opacity-data">Pre-installation: download the opacity data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/installation.html#installation-via-pip-install">Installation via pip install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/installation.html#compiling-prt-from-source">Compiling pRT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/installation.html#testing-the-installation">Testing the installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/highres.html">High-resolution spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/clouds.html">Including clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/emis_scat.html">Scattering for Emission Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/analysis.html">Analysis tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/pRT_Retrieval_Example.html">petitRADTRANS Retrieval Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/Rebinning_opacities.html">Rebinning opacities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/nat_cst_utility.html">Utility functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/poor_man.html">Interpolating chemical equilibrium abundances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/available_opacities.html">Available opacity species</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/available_opacities.html#line-absorbers">Line absorbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/available_opacities.html#cloud-opacities">Cloud opacities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/available_opacities.html#rayleigh-scatterers">Rayleigh scatterers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/available_opacities.html#continuum-opacity-sources">Continuum opacity sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/retrieval_examples.html">Retrieval Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/notebooks/pRT_Retrieval_Example.html">petitRADTRANS Retrieval Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/ret_transmission.html">OLD (from Mollière+19): Transmission spectrum retrieval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/ret_emission.html">OLD (from Mollière+19): Emission spectrum retrieval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/ret_analysis.html">OLD (from Mollière+19): Analysis of results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/opa_add.html">Adding opacities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/opa_add.html#importing-custom-made-opacity-tables-from-the-exomol-website">Importing custom-made opacity tables from the Exomol website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/opa_add.html#converting-cross-section-grids-from-dace">Converting cross-section grids from DACE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/opa_add.html#from-line-lists-to-opacities-using-exocross">From line lists to opacities (using ExoCross)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Code documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content/nat_cst_doc.html">nat_cst constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/petitRADTRANS/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">petitRADTRANS</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/retrieve_emission_paper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retrieve_emission_paper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/master_retrieval_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">master_retrieval_model</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/nice_corner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nice_corner</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/PT_envelopes/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PT_envelopes</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/retrieve_transmission_paper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retrieve_transmission_paper</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="content/installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2020, Paul Mollière
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
